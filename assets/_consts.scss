@@ -1,0 +1,9 @@
+* {
+  --foreground: #222;
+  --background: #eee;
+
+  @media screen and (prefers-color-scheme: dark) {
+    --background: #333;
+    --foreground: #eee;
+  }
+}

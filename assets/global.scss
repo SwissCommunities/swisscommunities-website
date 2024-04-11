@@ -1,0 +1,7 @@
+@use "consts.scss";
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  min-height: 100vh;
+}
