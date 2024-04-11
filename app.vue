@@ -8,3 +8,10 @@ import '~/assets/global.scss'
         <NuxtPage/>
     </NuxtLayout>
 </template>
+
+<style>
+main {
+    padding-top: 6em;
+    min-height: 100vh;
+}
+</style>
