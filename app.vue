@@ -11,7 +11,7 @@ import '~/assets/global.scss'
 
 <style>
 main {
-    padding-top: 6em;
+    padding-top: 7em;
     min-height: 100vh;
 }
 </style>

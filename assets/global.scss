@@ -17,4 +17,18 @@ nav > ul {
   display: flex;
   list-style: none;
   flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 300ms ease-in-out;
+
+  &:hover {
+    text-decoration: underline;
+    color: color-mix(in srgb, var(--accent) 50%, var(--foreground) 50%);
+  }
 }
