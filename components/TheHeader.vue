@@ -1,14 +1,4 @@
 <script lang="ts" setup>
-type Link = {
-	name: string,
-	href: string,
-	children?: Link[]
-}
-
-const links: Link[] = [{
-	name: 'Accueil',
-	url: '/'
-}]
 </script>
 
 <template>
@@ -21,17 +11,7 @@ const links: Link[] = [{
             />
         </NuxtLink>
         <h1>Swiss Communities</h1>
-        <nav>
-            <ul>
-                <li v-for="link in links" :key="link.href">
-                    <NuxtLink
-                            :to="link.href"
-                    >
-                        {{ link.name }}
-                    </NuxtLink>
-                </li>
-            </ul>
-        </nav>
+        <TheMenu/>
     </header>
 </template>
 
@@ -64,19 +44,9 @@ header {
 
   h1 {
     margin: 0;
-  }
 
-  nav {
-    ul {
-      flex-direction: row;
-
-      li {
-        a {
-          font-size: 1.25rem;
-          font-weight: bold;
-
-        }
-      }
+    @media screen and (max-width: 660px) {
+      font-size: 22px;
     }
   }
 }
