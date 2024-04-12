@@ -1,16 +1,13 @@
 <script lang="ts" setup>
+import Logo from "assets/icons/logo.svg"
 </script>
 
 <template>
     <header>
         <NuxtLink to="/">
-            <NuxtImg
-                    class="icon"
-                    height="50"
-                    src="/images/ch.png"
-            />
+            <Logo class="icon"/>
         </NuxtLink>
-        <h1>Swiss Communities</h1>
+        <h1>SwissCommunities</h1>
         <TheMenu/>
     </header>
 </template>
@@ -38,8 +35,11 @@ header {
     justify-self: end;
   }
 
-  img.icon {
-    border-radius: var(--sm-br);
+  svg.icon {
+    font-size: 64px;
+    height: 1em;
+    padding: 0;
+    margin: 0;
   }
 
   h1 {
