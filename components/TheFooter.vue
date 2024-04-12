@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import DiscordIcon from "~/assets/images/discord.svg"
-
 const currentYear = new Date().getFullYear();
 </script>
 
@@ -11,7 +9,22 @@ const currentYear = new Date().getFullYear();
                 <ul>
                     <li>
                         <NuxtLink to="https://discord.gg/tkxNt6YMBb">
-                            <DiscordIcon class="discord"/>
+                            <Icon name="logos:discord-icon"/>
+                        </NuxtLink>
+                    </li>
+                    <li>
+                        <NuxtLink to="https://www.twitch.tv/swisscommunities">
+                            <Icon name="logos:twitch"/>
+                        </NuxtLink>
+                    </li>
+                    <li>
+                        <NuxtLink to="https://www.tiktok.com/@swisscommunities">
+                            <Icon name="logos:tiktok-icon"/>
+                        </NuxtLink>
+                    </li>
+                    <li>
+                        <NuxtLink to="https://youtube.com/@SwissCommunities">
+                            <Icon name="logos:youtube-icon"/>
                         </NuxtLink>
                     </li>
                 </ul>
@@ -37,7 +50,12 @@ footer {
       margin-bottom: 1em;
 
       ul {
+        flex-direction: row;
+        margin: 0 0 2em;
+
         li {
+          margin: 0 1em;
+
           a {
             font-size: 4rem;
 
