@@ -1,0 +1,22 @@
+* {
+  --foreground-rgb: 4, 3, 22;
+  --foreground: rgb(var(--foreground-rgb));
+  --background-rgb: 251, 251, 254;
+  --background: rgb(var(--background-rgb));
+  --primary-rgb: 217, 41, 28;
+  --primary: rgb(var(--primary-rgb));
+  --secondary-rgb: 255, 203, 199;
+  --secondary: rgb(var(--secondary-rgb));
+  --accent-rgb: 255, 178, 77;
+  --accent: rgb(var(--accent-rgb));
+
+  --sm-br: .5em;
+
+  @media screen and (prefers-color-scheme: dark) {
+    --foreground-rgb: 237, 237, 237;
+    --background-rgb: 16, 16, 16;
+    --primary-rgb: 179, 31, 20;
+    --secondary-rgb: 118, 8, 0;
+    --accent-rgb: 207, 117, 0;
+  }
+}

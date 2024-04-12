@@ -5,19 +5,10 @@ import TheFooter from "~/components/TheFooter.vue";
 </script>
 
 <template>
-    <header>
-        <TheHeader/>
-    </header>
-
-    <main>
-        <slot/>
-    </main>
-
-    <footer>
-        <TheFooter/>
-    </footer>
+    <TheHeader/>
+    <slot/>
+    <TheFooter/>
 </template>
 
 <style scoped>
-
 </style>
