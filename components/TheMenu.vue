@@ -45,7 +45,7 @@ const isMenuDeployed = ref(false);
                     <nav v-if="isMenuDeployed" class="mobile">
                         <ul>
                             <li v-for="link in links">
-                                <NuxtLink :to="link.href">{{ link.name }}</NuxtLink>
+                                <NuxtLink :to="link.href" @click="isMenuDeployed = false">{{ link.name }}</NuxtLink>
                             </li>
                         </ul>
                     </nav>
@@ -210,6 +210,8 @@ nav.mobile {
   min-width: 40vw;
   padding: 2em;
   width: fit-content;
+  background-color: var(--background);
+  box-shadow: inset 0 10px 5px -10px black;
 
   &.sidebar-enter-active,
   &.sidebar-leave-active {
@@ -224,7 +226,7 @@ nav.mobile {
   ul {
     li {
       font-size: 1.4rem;
-      
+
       a {
         font-weight: 600;
       }
