@@ -33,7 +33,7 @@ const currentYear = new Date().getFullYear();
         <div class="copy">
             <span>&copy; 2024</span>
             <span v-if="currentYear !== 2024">&nbsp;- {{ currentYear }}</span>
-            <span>&nbsp;<NuxtLink href="https://drafolin.ch">Dråfølin</NuxtLink></span>
+            <span>&nbsp;SwissCommunities</span>
         </div>
     </footer>
 </template>
@@ -56,14 +56,25 @@ footer {
         li {
           margin: 0 1em;
 
+          @media screen and (max-width: 660px) {
+            margin: 0 .75em;
+          }
+
           a {
             font-size: 4rem;
+
+            @media screen and (max-width: 660px) {
+              font-size: 3rem;
+            }
 
             svg, img {
               height: 1em;
               color: black;
               transition: filter 300ms ease-in-out;
-              filter: grayscale(1);
+
+              @media screen and (pointer: fine) {
+                filter: grayscale(1);
+              }
 
               &:hover {
                 filter: none;
