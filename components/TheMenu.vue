@@ -1,16 +1,46 @@
 <script lang="ts" setup>
+import { ref, onMounted, onUnmounted, computed } from 'vue';
+
+const useWindowSize = () => {
+  const width = ref(0);
+  const height = ref(0);
+
+  const onResize = () => {
+    if (typeof window !== 'undefined') {
+      width.value = window.innerWidth;
+      height.value = window.innerHeight;
+    }
+  };
+
+  onMounted(() => {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('resize', onResize);
+      onResize();
+    }
+  });
+
+  onUnmounted(() => {
+    if (typeof window !== 'undefined') {
+      window.removeEventListener('resize', onResize);
+    }
+  });
+
+  return { width, height };
+};
+
 type Link = {
-	name: string,
-	href: string,
-	children?: Link[]
-}
+  name: string,
+  href: string,
+  children?: Link[]
+};
 
 const links: Link[] = [{
-	name: 'Accueil',
-	href: '/'
-}]
+  name: 'Accueil',
+  href: '/'
+}];
 
-const isUserOnMobile = computed(() => useWindowSize().width.value <= 1080);
+const windowSize = useWindowSize();
+const isUserOnMobile = computed(() => windowSize.width.value <= 1080);
 const isMenuDeployed = ref(false);
 </script>
 
