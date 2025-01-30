@@ -1,0 +1,60 @@
+:root {
+    font-family: "Open Sans", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text);
+}
+
+a {
+    color: $primary-color;
+    text-decoration: dashed underline;
+}
+
+main {
+    padding-top: 6rem;
+
+    div > section {
+        padding: 2rem 4rem;
+        > * {
+            margin: 0 auto;
+            max-width: 1200px;
+            padding: 0 1rem;
+        }
+    }
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+section {
+    width: 100%;
+
+    &.hero {
+        padding: 5rem 0;
+    }
+
+    &:nth-child(even) {
+        background-color: var(--secondary-background-color);
+    }
+
+    div.content {
+        p {
+            margin: 1rem 0;
+        }
+    }
+}
