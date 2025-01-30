@@ -1,0 +1,18 @@
+:root {
+    font-family: "Open Sans", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text);
+}
+
+a {
+    color: $primary-color;
+    text-decoration: dashed underline;
+}
