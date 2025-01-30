@@ -12,7 +12,7 @@
 
 <style lang="scss" scoped>
 header {
-    background-color: $primary-color;
+    background-color: var(--primary-color);
     color: white;
     display: flex;
     flex-direction: row;
